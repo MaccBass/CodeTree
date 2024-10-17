@@ -25,10 +25,8 @@ int main() {
         for (int j = i + 2; j < n; j++) {
 
             um[v[i + 1] + v[j]]++;
-            if (v[i + 1] + v[j] == diff) {
-                ans += um[v[i + 1] + v[j]];
-            }
         }
+        ans += um[diff];
     }
 
     cout << ans;
