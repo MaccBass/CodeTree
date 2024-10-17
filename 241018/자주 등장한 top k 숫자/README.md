@@ -36,3 +36,13 @@
 [easy]: https://img.shields.io/badge/쉬움-%235cb85c.svg?for-the-badge
 [medium]: https://img.shields.io/badge/보통-%23FFC433.svg?for-the-badge
 [hard]: https://img.shields.io/badge/어려움-%23D24D57.svg?for-the-badge
+
+
+# 몰랐던 / 배운 내용
+1. unordered_map은 기본적으로 순서를 따지지 않고, 해시 테이블 내에 key-value가 저장되는 방식이다. 즉, algorithm 라이브러리를 써서 sort(um.begin(), um.end()) 식으로 정렬이 불가능하다.
+unordered_map의 key와 value는 pair를 이용해 저장하므로, vector<pair<T, T>>를 만들고 iterator를 이용해 할당해준 뒤 sort()를 돌리면 된다.
+
+2. algorithm 라이브러리의 sort()는 sorting 방법을 지정해줄 수 있다. 코드 내의 compare()은 pair의 second값(value)을 기준으로 정렬, 만약 같은 경우 first값(key)을 기준으로 내림차순 정렬하게 했다.
+
+3. const 키워드는 값을 상수로 사용하겠다는 의미이다. 즉, const pair<> a와 같이 지정한 경우 a의 값을 함수 내에서 수정할 수 없다.
+이와 맞물려 const pair<>&와 같이 참조를 사용했는데, 참조를 사용했을 때 값을 함부로 변경하면 원본 값에도 영향을 줄 위험성이 있지만, const를 사용하였기에 이 문제가 해결된다. pair 객체를 복사하지도 않았기 때문에 메모리 공간 사용도 적어진다. 
