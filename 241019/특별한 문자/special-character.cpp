@@ -1,27 +1,35 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <queue>
 using namespace std;
 
 unordered_map<char, int> um;
+queue<char> q;
 int main() {
     string str;
-    char first_alphabet = ' ';
+    char ans = ' ';
     cin>>str;
 
     for (const auto& i: str){
         if (um.find(i) == um.end()){
-            if (first_alphabet == ' ') first_alphabet = i;
-            um[i]++;
+            q.push(i);
         }
-        else {
-            if (i==first_alphabet){
-                first_alphabet = ' ';
-            }
+        um[i]++;
+    }
+
+    while(!q.empty()){
+        if (um[q.front()] == 1){
+            ans = q.front();
+            break;
+        }
+        else{
+            q.pop();
         }
     }
 
-    if (first_alphabet == ' ') cout<<"None";
-    else cout<<first_alphabet;
+
+    if (ans == ' ') cout<<"None";
+    else cout<<ans;
     return 0;
 }
