@@ -7,7 +7,7 @@ unordered_map<int, int> point;
 int main() {
 
     int n; cin>>n;
-    int ans = 0;
+    long long ans = 0;
     while (n){
 
         int x, y;
@@ -23,7 +23,7 @@ int main() {
     }
 
     for (const auto& i: point){
-        ans += i.second;
+        ans += (long long)i.second;
     }
 
 
