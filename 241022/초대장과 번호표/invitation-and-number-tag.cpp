@@ -27,8 +27,7 @@ int main() {
                 cin >> tmp;
                 group.insert(tmp);
             }
-            groups.push_back(group);
-        }
+        groups.push_back(group);
     }
 
     while (!invitation.empty()) {
