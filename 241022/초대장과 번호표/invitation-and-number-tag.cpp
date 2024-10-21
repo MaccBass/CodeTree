@@ -23,7 +23,9 @@ int main() {
         int k; cin >> k;
         // k가 1명: 바로 초대, 2명: 첫번째 초대받고 1명남으니 자동 초대
         if (k < 3) {
-            int tmp; cin >> tmp; invitation.push(tmp);
+            for (int i = 0; i < k; i++) {
+                int tmp; cin >> tmp; invitation.push(tmp);
+            }
         }
         // k가 3명 이상: 첫번째는 초대, 나머지는 set으로 만들어 vector에 넣음.
         else {
