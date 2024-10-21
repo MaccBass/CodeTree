@@ -21,15 +21,16 @@ int main() {
     }
     for (int i = 0; i < g; i++) {
         int k; cin >> k;
-            int tmp; cin >> tmp; invitation.push(tmp);
-            unordered_set<int> group;
-            for (int j = 0; j < k - 1; j++) {
-                cin >> tmp;
-                group.insert(tmp);
-            }
+        int tmp;
+        unordered_set<int> group;
+        for (int j = 0; j < k; j++) {
+            cin >> tmp;
+            group.insert(tmp);
+        }
         groups.push_back(group);
     }
 
+    invitation.push(1);
     while (!invitation.empty()) {
         int num;
         num = invitation.front();
