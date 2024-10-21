@@ -22,26 +22,27 @@ int main() {
             }
             cout<<'\n';
         }
-        else {
+        if (op == "add"){
+            cin>>k>>v;
+            m[k]=v;
+        }
+        if (op == "remove"){
             cin>>k;
-            if (op == "add"){
-                cin>>v;
-                m[k]=v;
+            m.erase(k);
+        }
+        if (op == "find"){
+            cin>>k;
+            if (m.find(k) == m.end()){
+                cout<<"None"<<'\n';
             }
-            if (op == "remove"){
-                m.erase(k);
-            }
-            if (op == "find"){
-                if (m.find(k) == m.end()){
-                    cout<<"None"<<'\n';
-                }
-                else {
-                    cout<<m[k]<<'\n';
-                }
+            else {
+                cout<<m[k]<<'\n';
             }
         }
-        
+
         --n;
     }
+
+
     return 0;
 }
