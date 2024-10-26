@@ -9,13 +9,19 @@ int main() {
     s.insert(0);
     for(int i=0;i<n;i++){
         int tmp;cin>>tmp;s.insert(tmp);
-        for (set<int>::iterator it = s.begin(); it != prev(s.end()); it++){
-            int diff=*next(it) - *it;
-            if (diff < ans){
-                ans = diff;
-            }
+        int diff;
+        auto it=s.find(tmp);
+        
+        if (next(it) != s.end()){
+            diff = *(next(it)) - *it;
+            if (diff<ans) ans=diff;
         }
-            cout<<ans<<'\n';
+        if (it != s.begin()){
+            diff=*it - *(prev(it));
+            if(diff<ans) ans=diff;
+        }
+
+        cout<<ans<<'\n';
     }
     return 0;
 }
