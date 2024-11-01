@@ -17,8 +17,8 @@ int main() {
     }
 
     for (set<int>::iterator it = s.begin(); it != s.end(); it++){
-        for (set<int>::iterator n = next(it); n != s.end(); n++){
-            int tmp = *n - *it;
+        for (set<int>::iterator it2 = next(it); it2 != s.end(); it2++){
+            int tmp = *it2 - *it;
             if (tmp<m) continue;
             if (tmp>=ans) {
                 break;
@@ -32,7 +32,7 @@ int main() {
     }
 
     if (ans == MAX) cout<<-1;
-    cout<<ans;
+    else cout<<ans;
 
     return 0;
 }
