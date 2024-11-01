@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#define MAX 2147483647
 
 using namespace std;
 set<int> s;
@@ -30,6 +31,7 @@ int main() {
         if (m==ans) break;
     }
 
+    if (ans == MAX) cout<<-1;
     cout<<ans;
 
     return 0;
