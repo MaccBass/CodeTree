@@ -1,6 +1,6 @@
 #include <iostream>
 #include <set>
-#define MAX 2147483647
+#define MAX 2147000000
 
 using namespace std;
 set<int> s;
