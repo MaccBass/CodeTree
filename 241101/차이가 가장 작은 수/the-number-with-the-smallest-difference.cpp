@@ -8,7 +8,7 @@ set<int> s;
 int main() {
     
     int n, m;
-    int ans = 2147000000;
+    int ans = MAX;
     cin>>n>>m;
     
     while (n){
