@@ -19,7 +19,7 @@ int main() {
 
     for (auto it=s.begin(); it != s.end(); it++){
         auto it2 = next(it);
-        int tmp;
+        int tmp = MAX;
         
         // 차가 m보다 처음으로 커질때까지 it2 증가
         while ((*it2 - *it) < m && it2 != s.end()){
