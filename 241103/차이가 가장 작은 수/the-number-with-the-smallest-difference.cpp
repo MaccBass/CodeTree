@@ -17,7 +17,7 @@ int main() {
         n--;
     }
 
-    for (auto it=s.begin(); it != s.end(); it++){
+    for (auto it=s.begin(); it != s.end();){
         auto it2 = next(it);
         if (it2 == s.end()) break;
         int tmp = MAX;
@@ -36,7 +36,7 @@ int main() {
         // 갱신
         if (tmp < ans && tmp >= m) ans = tmp;
         if (ans == m) break;
-        it = prev(it2);
+        it = it2;
 
     }
 
