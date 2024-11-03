@@ -36,7 +36,7 @@ int main() {
         // 갱신
         if (tmp < ans && tmp >= m) ans = tmp;
         if (ans == m) break;
-        it = prev(it2);
+        it = it2;
 
     }
 
