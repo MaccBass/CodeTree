@@ -29,6 +29,6 @@ int main() {
 
         if (tmp < ans) ans=tmp;
     }
-
-    cout<<ans;
+    if (ans == MAX) cout<<-1;
+    else cout<<ans;
 }
