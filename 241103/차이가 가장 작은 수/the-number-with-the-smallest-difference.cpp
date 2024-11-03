@@ -18,30 +18,17 @@ int main() {
     }
 
     for (auto it=s.begin(); it != s.end(); it++){
-        auto it2 = next(it);
+        auto it2 = s.lower_bound(*it+m);
         if (it2 == s.end()) break;
-        int tmp = MAX;
-        
-        // 차가 m보다 처음으로 커질때까지 it2 증가
-        while (it2 != s.end() && (*it2 - *it) < m){
-            it2++;
+
+        int tmp = *it2 - *it;
+        if (tmp == m) {
+            ans = m;
+            break;
         }
 
-        // 끝까지 가도 m보다 큰 경우가 안나오므로, it보다 더 큰수와 맨 끝수를 빼도 m보다 작음.
-        
-        // it를 증가시키며 it~it2 범위까지 가장 작은 차를 찾음
-        for (it; (*it2-*it) >= m; it++){
-            tmp = *it2 - *it;
-        }
-        // 갱신
-        if (tmp < ans && tmp >= m) ans = tmp;
-        if (ans == m) break;
-        it = prev(it2);
-
+        if (tmp < ans) ans=tmp;
     }
 
-    if (ans == MAX) cout << -1;
-    else cout << ans;
-
-    return 0;
+    cout<<ans;
 }
