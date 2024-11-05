@@ -4,6 +4,9 @@ using namespace std;
 
 struct compare{
     bool operator()(pair<int, int> a, pair<int, int> b){
+        if (a.first + a.second == b.first + b.second) {
+            return a.first > b.first;
+        }
         return a.first+a.second > b.first+b.second;
     }
 };
