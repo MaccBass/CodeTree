@@ -8,8 +8,6 @@ priority_queue<pair<int, int>> runners;
 set<pair<int, int>> groups;
 
 int main() {
-    
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     // n: 사람수, t: t분동안 달림
     int n, t;
