@@ -31,7 +31,7 @@ int main() {
 }
 
 void getAns(){
-    int tmp=1;
+    long long tmp=1;
     priority_queue<int> pq_tmp = pq;
     for (int i=0;i<3;i++){
         tmp *= pq_tmp.top();
