@@ -4,7 +4,7 @@ using namespace std;
 
 priority_queue<int> pq;
 int n;
-int ans = -1;
+long long ans = -1;
 void getAns();
 int main() {
     
