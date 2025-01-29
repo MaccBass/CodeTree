@@ -59,12 +59,5 @@ int main() {
         }
         n--;
     }
-
-    cout << '\n';
-    auto it = l.begin();
-    while (it != l.end()) {
-        cout << *it << ' ';
-        it++;
-    }
     return 0;
 }
