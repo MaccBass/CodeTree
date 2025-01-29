@@ -21,12 +21,7 @@ int main() {
         switch (method) {
         case 1:
             cin >> s_value;
-            if (cur != l.begin()) {
-                l.insert(cur, s_value);
-            }
-            else {
-                l.push_front(s_value);
-            }
+            l.insert(cur, s_value);
             break;
 
         case 2:
