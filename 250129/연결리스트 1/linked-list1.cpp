@@ -20,7 +20,7 @@ int main() {
         case 1:
             cin >> s_value;
             if (cur != l.begin()) {
-                l.insert(prev(cur), s_value);
+                l.insert(cur, s_value);
             }
             else {
                 l.push_front(s_value);
